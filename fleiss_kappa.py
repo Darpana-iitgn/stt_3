@@ -51,4 +51,5 @@ for i, row in enumerate(annotation_matrix):
 
 kappa = fleiss_kappa(frequency_matrix)
 
+print("Label Mapping:", label_mapping)
 print("Fleiss's Kappa:", kappa)

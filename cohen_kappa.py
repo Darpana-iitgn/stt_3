@@ -45,6 +45,10 @@ def calculate_cohen_kappa(annotations1, annotations2):
     annotator2_labels_flat = [label[0] for label in annotator2_labels]
 
     kappa = cohen_kappa_score(annotator1_labels_flat, annotator2_labels_flat)
+    
+    
+    print("Annotator 1 label distribution:", Counter([label for labels in annotator1_labels for label in labels]))
+    print("Annotator 2 label distribution:", Counter([label for labels in annotator2_labels for label in labels]))
 
     return kappa
 
